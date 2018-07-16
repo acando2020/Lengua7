@@ -1,0 +1,68 @@
+var resp = 0;
+$('.enc').click(function() {
+
+    if ($(this).hasClass('encierra')) {
+        $(this).removeClass('encierra')
+    } else {
+        $(this).addClass('encierra')
+    }
+    if ($("#R1").hasClass("encierra")) {
+        $("#R2").removeClass("encierra")
+        $("#R3").removeClass("encierra")
+         
+
+    } else if ($("#R2").hasClass("encierra")) {
+        $("#R1").removeClass("encierra")
+        $("#R3").removeClass("encierra")
+         
+
+    } else if ($("#R3").hasClass("encierra")) {
+        $("#R1").removeClass("encierra")
+        $("#R2").removeClass("encierra")
+
+        resp = 10;
+    }
+});
+
+function resolverN23() {
+    $("#nt23_1").val(parseFloat(resp));
+
+    var nota1 = document.getElementById("nt23_1").value;
+    var nota2 = document.getElementById("nt23_2").value;
+    var nota3 = document.getElementById("nt23_3").value;
+    if ((nota1 == "") || (nota2 == "") || (nota3 == "")) {
+        alert("Debe ingresar las notas para poder evaluar");
+        document.getElementById("nt23_2").focus();
+    } else {
+        if ((nota1 <= 10) && (nota2 <= 10) && (nota3 <= 10)) {
+            var total = (parseInt(nota1) + parseInt(nota2) + parseInt(nota3)) / 3;
+            document.getElementById("nt23_1").style.backgroundColor = "#6DFF6F";
+            document.getElementById("nt23_2").style.backgroundColor = "#6DFF6F";
+            document.getElementById("nt23_3").style.backgroundColor = "#6DFF6F";
+            $('#txtNota').html(total.toFixed(2) + ' ');
+
+            document.getElementById('bt_comprobar').disabled = true;
+            document.getElementById('nt23_1').disabled = true;
+            document.getElementById('nt23_2').disabled = true;
+            document.getElementById('nt23_3').disabled = true;
+            if($("#R3").hasClass("encierra")){
+            document.getElementById("R3").style.backgroundColor = "#6DFF6F";
+
+
+            }else if ($("#R2").hasClass("encierra")) {
+            	 document.getElementById("R2").style.backgroundColor = "#F95858";
+            }else if ($("#R1").hasClass("encierra")) {
+            	document.getElementById("R1").style.backgroundColor = "#F95858";
+            }
+
+        } else {
+            alert('La nota no debe exceder los 10 puntos');
+            document.getElementById("nt23_1").style.backgroundColor = "#F95858";
+            document.getElementById("nt23_2").style.backgroundColor = "#F95858";
+            document.getElementById("nt23_3").style.backgroundColor = "#F95858";
+            document.getElementById("nt23_2").focus();
+        }
+    }
+
+
+}
