@@ -106,7 +106,7 @@ function initElementos(classDiv, arrayElement) { //Funcion para iniciar elemento
         if (classDiv == "imagen") {
             $('#' + cajas[i].id).html('<img class="center"  src="' + arrayElement[i] + '" alt="' + arrayElement[i] + '"   id="img' + [i] + '">');
         } else if (classDiv == "texto") {
-            $('#' + cajas[i].id).html('<span class= "cajas-cuentos"  id="' + arrayElement[i] + '">' + arrayElement[i] + '</span>');
+            $('#' + cajas[i].id).html('<h4><span class= "cajas-cuentos"  id="' + arrayElement[i] + '">' + arrayElement[i] + '</span></h4>');
         }
 
     }

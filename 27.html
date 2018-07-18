@@ -33,7 +33,10 @@
     text-align: center;
     padding: 5px;
     border-radius: 5px;
+
+
 }
+
 
 .actividad1 {
     background: #fff;
@@ -60,13 +63,14 @@
 #cabecera .badge {
     background-color: #232956;
 }
+
 </style>
 
 <body>
     <div id="nota-informativa" class="nota-ayuda">
         <button type="button" class="close" onclick="cerrar_ayuda()" aria-label="Close"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></button>
         <!--ACA ESCRIBIR TEXTO DE LA AYUDA DE LA ACTIVIDAD-->
-        Escribe la respuesta en los espacios en blanco.
+        Completa el siguiente crucigrama.
         <br>
         <span id="ayudas"></span>
     </div>
@@ -141,7 +145,7 @@
             <div class="panel-body">
                 <!--pregunats de la actividad-->
                 <div class="text-question">
-                    <input type="number" id="nt1_1" placeholder="0" class="nota-abierta cajas1" min="0" max="5"><span> <b style="color:#005CA9">1.</b> <b>Completa</b> el siguiente crucigrama.</span>
+                    <span> <b style="color:#005CA9">1.</b> <b>Completa</b> el siguiente crucigrama.</span>
                 </div>
                 <div align="center" class="table-responsive">
                     <table style="width: auto;">
@@ -393,6 +397,7 @@
     var titulos = "exploro";
     $("#txtNota").html("0");
     $("#n_pagina").html("26");
+    $("input").prop('maxlength', 1);
     </script>
 </body>
 

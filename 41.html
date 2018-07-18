@@ -19,16 +19,15 @@
 .cajas {
     max-width: 95%;
     max-height: 200px;
-    border: 1px #98007f solid;
+    border: 1px #009277 solid;
     border-radius: 5px;
     padding: 15px;
     margin: 5px;
-    width: auto;
 }
 
 .cajas1 {
 
-    border: 1px #98007f solid;
+    border: 1px #009277 solid;
 }
 
 .actividad1 {
@@ -38,13 +37,13 @@
 .correcto {
     color: #ffffff;
     background-color: #8FB435;
-   
+    font-weight: 700;
 }
 
 .incorrecto {
     color: #ffffff;
     background-color: #E76E80;
-  
+    font-weight: 700;
 }
 
 .desactivar {
@@ -62,7 +61,7 @@
     <div id="nota-informativa" class="nota-ayuda">
         <button type="button" class="close" onclick="cerrar_ayuda()" aria-label="Close"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></button>
         <!--ACA ESCRIBIR TEXTO DE LA AYUDA DE LA ACTIVIDAD-->
-       Relaciónalas con el elemento que creas que corresponda.
+        Escribe la respuesta en los espacios en blanco.
         <br>
         <span id="ayudas"></span>
     </div>
@@ -102,7 +101,7 @@
                     </button>
                 </li>
                 <li>
-                    <button class="btn button button_3 btnCalificar mytooltip" data-info="Calificar / Comprobar" id="bt_comprobar">
+                    <button class="btn button button_3 btnCalificar mytooltip" data-info="Calificar / Comprobar" id="bt_comprobar" onclick="resolverN1()">
                         <span class="glyphicon glyphicon-check" aria-hidden="true"></span>
                     </button>
                 </li>
@@ -136,40 +135,17 @@
             </div>
             <div class="panel-body">
                 <!--pregunats de la actividad-->
-                
-                <br>
                 <div class="text-question">
-                    <span> <b style="color:#005CA9">1.</b>Cada función del lenguaje hace un énfasis especial sobre un elemento del circuito de la comunicación, de acuerdo con su propósito. <b>Recuerda</b> las funciones del lenguaje oral estudiadas anteriormente y <b>relaciónalas</b> con el elemento que creas que corresponda.</span>
+                    <input type="number" id="nt1_1" placeholder="0" class="nota-abierta cajas1" min="0" max="5"><span> <b style="color:#005CA9">1.</b>¿Por qué crees que la palabra brazo se escribe con <span style="color:#22a9f7">b</span>?</span>
                 </div>
-                 <div class="actividad1" style="align-content: center;">
-                    <table class="table">
-                        <tr>
-                            <td>
-                                <div class="col-lg-3 col-md-2 col-sm-2 col-xs-5 cajas imagen" id="caja_img1"></div>
-                            </td>
-                            <td>
-                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4 cajas texto" id="caja_txt1"></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="col-lg-3 col-md-2 col-sm-2 col-xs-5 cajas imagen" id="caja_img2"></div>
-                            </td>
-                            <td>
-                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4 cajas texto" id="caja_txt2"></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="col-lg-3 col-md-2 col-sm-2 col-xs-5 cajas imagen" id="caja_img3"></div>
-                            </td>
-                            <td>
-                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4 cajas texto" id="caja_txt3"></div>
-                            </td>
-                        </tr>
-                         
-                    </table>
-                   
+                <div>
+                    <br><input type="text" placeholder="Escribe tu respuesta" class="form-control">
+                </div><br>
+                <div class="text-question">
+                    <input type="number" id="nt1_2" placeholder="0" class="nota-abierta cajas1" min="0" max="5"><span> <b style="color:#005CA9">2.</b> ¿Qué regla recuerdas sobre el uso de la <span style="color:#22a9f7">b</span>?</span>
+                </div>
+                <div>
+                    <br><input type="text" placeholder="Escribe tu respuesta" class="form-control">
                 </div>
             </div>
         </div>
@@ -217,11 +193,11 @@
     <script src="js/helper.js"></script>
     <script src="js/activities.js"></script>
     <script src="js/Utilitario.js"></script>
-    <script src="js/actividad28.js"></script>
+    <script src="js/actividad1.js"></script>
     <script type="text/javascript">
-    var titulos = "reflexiono";
+    var titulos = "exploro";
     $("#txtNota").html("0");
-    $("#n_pagina").html("26");
+    $("#n_pagina").html("32");
     </script>
 </body>
 

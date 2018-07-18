@@ -1,4 +1,3 @@
-
 //Genera un pdf, del elemento html que le indiques
 function save_to_pdf(htmlElementId) {
     var element = document.getElementById(htmlElementId);
@@ -7,9 +6,9 @@ function save_to_pdf(htmlElementId) {
     html2pdf(element, {
         margin: 0.5,
         filename: 'actividad.pdf',
-        image: {type: 'jpeg', quality: 0.98},
-        html2canvas: {dpi: 192, letterRendering: true},
-        jsPDF: {unit: 'in', format: 'letter', orientation: 'portrait'}
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { dpi: 192, letterRendering: true },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
     });
 }
 //coloca el nombre del alumno en el div nombre_alumno
@@ -21,7 +20,7 @@ function save_open_activity_to_local(alumno) {
     $('#nombre_alumno').addClass("no-valid");
     if (valida_existe('txtAlumno')) {
         $('#nombre_alumno').removeClass('no-valid');
-        $('#nombre_alumno').html('').append('Alumno: ' + $(nom).val() + "     Puntaje: " +  $("#txtNota").html() );
+        $('#nombre_alumno').html('').append('Alumno: ' + $(nom).val() + "     Puntaje: " + $("#txtNota").html());
         $('#nombre_alumno').attr('hidden', false);
         $('#botonera').hide();
         ocultar_by_class('ocultable');
@@ -58,24 +57,24 @@ function carga_selects(values) {
             option.value = vals[j];
             elements[i].add(option);
         }
-    }
-    ;
+    };
     document.getElementById('txtNota').innerHTML = ' / 10';
     habilitar_by_class('respuestas');
 }
+
 function iniciar_act_calif_selects(values) {
     carga_selects(values);
     //$(".btn").tooltip('hide');
-//    document.getElementsByClassName('btnRepetir').removeAttribute('disabled');
-//    document.getElementByClassName('btnCalificar').removeAttribute('disabled');
-//    document.getElementByClassName('btnIniciar').setAttribute('disabled', 'true');
+    //    document.getElementsByClassName('btnRepetir').removeAttribute('disabled');
+    //    document.getElementByClassName('btnCalificar').removeAttribute('disabled');
+    //    document.getElementByClassName('btnIniciar').setAttribute('disabled', 'true');
 
     abled('btnRepetir');
     abled('btnCalificar');
     disabled('btnIniciar');
-//    habilitar_by_class('btnRepetir');
-//    habilitar_by_class('btnCalificar');
-//    desabilitar_by_class('btnIniciar');
+    //    habilitar_by_class('btnRepetir');
+    //    habilitar_by_class('btnCalificar');
+    //    desabilitar_by_class('btnIniciar');
 }
 
 function restart_act_calif_selects(values) {
@@ -91,6 +90,7 @@ function abled(className) {
     }
 
 }
+
 function disabled(className) {
     var elems = document.getElementsByClassName(className);
     for (var i = 0; i < elems.length; i++) {
@@ -170,8 +170,7 @@ function comprobar_calificar_txt() {
         } else {
             respuestas[i].classList.add('no-valid');
             respuestas[i].classList.remove('valid');
-        }
-        ;
+        };
     }
     desabilitar_by_class('respuestas');
     desabilitar_by_class('btnCalificar');
@@ -199,7 +198,7 @@ function drop(ev) {
     return document.getElementById(data);
 
 
-//    console.log(childs);
+    //    console.log(childs);
 }
 
 function moveimage(ev) {
@@ -226,8 +225,7 @@ function evaluar_act_drag() {
         } else {
             respuestas[i].parentNode.classList.add('no-valid');
             respuestas[i].parentNode.classList.remove('valid');
-        }
-        ;
+        };
     }
     desabilitar_by_class('btnCalificar');
     document.getElementById('txtNota').innerHTML = Math.round(nota) + ' / 10';
@@ -247,14 +245,14 @@ function comprobar_seleccion_txt() {
         } else {
             marks[i].classList.add('no-valid');
             marks[i].classList.remove('valid');
-        }
-        ;
+        };
     }
     desabilitar_by_class('heart');
     desabilitar_by_class('cross');
     desabilitar_by_class('btnCalificar');
     document.getElementById('txtNota').innerHTML = Math.round(nota) + ' / 10';
 }
+
 function comprobar_velas() {
     var respuestas = document.getElementsByClassName('respuestas');
     var soluciones = document.getElementsByClassName('solucion');
@@ -269,14 +267,14 @@ function comprobar_velas() {
         } else {
             marks[i].classList.add('no-valid');
             marks[i].classList.remove('valid');
-        }
-        ;
+        };
     }
     desabilitar_by_class('heart');
     desabilitar_by_class('cross');
     desabilitar_by_class('btnCalificar');
     document.getElementById('txtNota').innerHTML = nota.toFixed(2) + ' / 10';
 }
+
 function comprobar_marks() {
     var respuestas = document.getElementsByClassName('respuestas');
     var soluciones = document.getElementsByClassName('solucion');
@@ -291,8 +289,7 @@ function comprobar_marks() {
         } else {
             marks[i].classList.add('no-valid');
             marks[i].classList.remove('valid');
-        }
-        ;
+        };
         marks[i].disabled = true;
     }
     desabilitar_by_class('heart');
@@ -315,8 +312,7 @@ function comprobar_subrayar() {
         } else {
             subrayar[i].classList.add('no-valid');
             subrayar[i].classList.remove('valid');
-        }
-        ;
+        };
     }
     desabilitar_by_class('respuestas');
     desabilitar_by_class('btnCalificar');
@@ -355,19 +351,20 @@ function calificar_abierta() {
         $('.nota-abierta').addClass('no-valid')
         alert('La nota no debe exceder los 10 puntos');
         //alert('La nota total no debe exeder de 10 puntos.')
-    } else {
-        $('#txtNota').html(nt.toFixed(2)+' ');
-        // desabilitar_by_class('nota-abierta');
-    }
-    if (vacio > 0) {
+
+    }else if (vacio > 0) {
         alert('todas las preguntas se deben evaluar');
+        $(elList[i]).removeClass('no-valid')
+        
+    } else {
+        $('#txtNota').html(nt.toFixed(2) + ' ');
+        // desabilitar_by_class('nota-abierta');
+        $(".respuesta").attr('disabled', true)
+        $(".nota-abierta").attr('disabled', true)
+        document.getElementById('bt_comprobar').disabled = true;
+        $(".btnGuardar").removeClass('disabled')
     }
-    $(".respuesta").attr('disabled', true)
-    $(".nota-abierta").attr('disabled', true)    
-     document.getElementById('bt_comprobar').disabled = true;
-    $(".btnGuardar").removeClass('disabled')
+    
+
 
 }
-
-
-
