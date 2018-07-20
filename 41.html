@@ -19,7 +19,7 @@
 .cajas {
     max-width: 95%;
     max-height: 200px;
-    border: 1px #009277 solid;
+    border: 1px #005ca4 solid;
     border-radius: 5px;
     padding: 15px;
     margin: 5px;
@@ -27,7 +27,7 @@
 
 .cajas1 {
 
-    border: 1px #009277 solid;
+    border: 1px #005ca4 solid;
 }
 
 .actividad1 {
@@ -101,7 +101,7 @@
                     </button>
                 </li>
                 <li>
-                    <button class="btn button button_3 btnCalificar mytooltip" data-info="Calificar / Comprobar" id="bt_comprobar" onclick="resolverN1()">
+                    <button class="btn button button_3 btnCalificar mytooltip" data-info="Calificar / Comprobar" id="bt_comprobar" onclick="resolverN40()">
                         <span class="glyphicon glyphicon-check" aria-hidden="true"></span>
                     </button>
                 </li>
@@ -136,16 +136,33 @@
             <div class="panel-body">
                 <!--pregunats de la actividad-->
                 <div class="text-question">
-                    <input type="number" id="nt1_1" placeholder="0" class="nota-abierta cajas1" min="0" max="5"><span> <b style="color:#005CA9">1.</b>¿Por qué crees que la palabra brazo se escribe con <span style="color:#22a9f7">b</span>?</span>
+                    <input type="number" id="nt40_1" placeholder="0" class="nota-abierta cajas1" min="0" max="10"><span> <b style="color:#005CA9">1.</b> <b>Escribe</b> una comparación de igualdad de calidad entre dos películas que hayas visto.</span>
                 </div>
+                <br>
                 <div>
-                    <br><input type="text" placeholder="Escribe tu respuesta" class="form-control">
-                </div><br>
+                    <input type="text" title="El estudiante debe usar la construcción tan + adjetivo + como." placeholder="El estudiante debe usar la construcción tan + adjetivo + como." class="form-control cajas1">
+                </div>
+                <br>
                 <div class="text-question">
-                    <input type="number" id="nt1_2" placeholder="0" class="nota-abierta cajas1" min="0" max="5"><span> <b style="color:#005CA9">2.</b> ¿Qué regla recuerdas sobre el uso de la <span style="color:#22a9f7">b</span>?</span>
+                    <input type="number" id="nt40_2" placeholder="0" class="nota-abierta cajas1" min="0" max="10"><span> <b style="color:#005CA9">2.</b> <b>Identifica</b> qué construcción comparativa se usó en esta oración:</span>
+                    <h4>Ese lugar tenía tantos atractivos turísticos como mi ciudad.</h4>
                 </div>
                 <div>
-                    <br><input type="text" placeholder="Escribe tu respuesta" class="form-control">
+                    <input type="text" class="form-control cajas1" placeholder="Escribe tu respuesta">
+                </div>
+                <br>
+                <div class="text-question">
+                    <input type="number" id="nt40_3" placeholder="0" class="nota-abierta cajas1" min="0" max="10"><span> <b style="color:#005CA9">3.</b> <b>Redacta</b> una comparación que use la forma verbo + como.</span>
+                </div>
+                <div><br>
+                    <input type="text" class="form-control cajas1" title="El estudiante debe usar la construcción verbo + como." placeholder="El estudiante debe usar la construcción verbo + como.">
+                </div><br>
+                 <div class="text-question">
+                    <input type="number" id="nt40_4" placeholder="0" class="nota-abierta cajas1" min="0" max="10"><span> <b style="color:#005CA9">4.</b> <b>Escribe</b> nuevamente este párrafo usando el conector <b style="color:#2AB4D3">como</b>.</span>
+                    <h4 style="text-align: justify;">La ciudad del Norte era hermosa. Igual de hermosa era la ciudad vecina del Sur. La ciudad del Norte tenía muchísimos parques. La ciudad del Sur también tenía muchos parques. En la ciudad del Norte ese invierno nevó muchísimo. Nunca antes había nevado así.</h4>
+                </div>
+                <div><br>
+                    <textarea name="" id="" cols="30" rows="5" class="form-control cajas1" placeholder="Escribe tu respuesta"></textarea>
                 </div>
             </div>
         </div>
@@ -193,11 +210,11 @@
     <script src="js/helper.js"></script>
     <script src="js/activities.js"></script>
     <script src="js/Utilitario.js"></script>
-    <script src="js/actividad1.js"></script>
+    <script src="js/actividad41.js"></script>
     <script type="text/javascript">
-    var titulos = "exploro";
+    var titulos = "aplico";
     $("#txtNota").html("0");
-    $("#n_pagina").html("32");
+    $("#n_pagina").html("31");
     </script>
 </body>
 

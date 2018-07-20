@@ -17,16 +17,12 @@
 </head>
 <style type="text/css">
 .cajas {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 95%;
+    max-height: 200px;
     border: 1px #005ca4 solid;
     border-radius: 5px;
     padding: 15px;
     margin: 5px;
-}
-
-.bordestablas {
-    border: 1px #0072AB solid;
 }
 
 .cajas1 {
@@ -34,23 +30,20 @@
     border: 1px #005ca4 solid;
 }
 
-.encierra {
-    background: rgba(153, 204, 255, 0.8);
-    color: #fff;
-}
-
 .actividad1 {
     background: #fff;
 }
 
 .correcto {
-    color: white;
+    color: #ffffff;
     background-color: #8FB435;
+    font-weight: 700;
 }
 
 .incorrecto {
-    color: white;
+    color: #ffffff;
     background-color: #E76E80;
+    font-weight: 700;
 }
 
 .desactivar {
@@ -62,13 +55,22 @@
 #cabecera .badge {
     background-color: #232956;
 }
+.oval-half-red {
+     width: 250px;
+     height: 100px;
+     -moz-border-radius: 0 50% / 0 100%;
+     -webkit-border-radius: 0 50% / 0 100%;
+     border-radius: 0 50% / 0 100%;
+     background: #5cb85c;
+     border: 3px solid #555;
+}
 </style>
 
 <body>
     <div id="nota-informativa" class="nota-ayuda">
         <button type="button" class="close" onclick="cerrar_ayuda()" aria-label="Close"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></button>
         <!--ACA ESCRIBIR TEXTO DE LA AYUDA DE LA ACTIVIDAD-->
-        Relaciona cada parte del texto con su función, arrastrando la imagen al lugar que le pertenece.
+        Escribe la respuesta en los espacios en blanco.
         <br>
         <span id="ayudas"></span>
     </div>
@@ -143,16 +145,32 @@
             <div class="panel-body">
                 <!--pregunats de la actividad-->
                 <div class="text-question">
-                    <img src="img/trabajamos_juntos.png" alt="" class="img-responsive"><br>
-                    <input type="number" placeholder="0" class="nota-abierta cajas1" min="0" max="10"><span> <b style="color:#005CA9">1.</b> <b>Trabaja</b> con un compañero. Cada uno <b>invente</b> un pequeño texto con función poética. <b>Repítanlo</b> oralmente para su compañero.</span>
-                    <br>
+                    <img class="img-responsive" src="img/redactartxt.png"></img>
+                    <input type="number" placeholder="0" class="nota-abierta" min="0" max="5"><span> <b style="color:#005CA9"> </b> <b>Escribe</b> tu reseña.</span>
+
+                    <div align="center">
+                        <table class="table" style="width: 80%;">
+                        <tr>
+                            <td style="text-align: center;">Título</td>
+                            <td><input class="form-control" type="text" style="border: 1px #0072AB solid" placeholder="Escribe tu respuesta"></input></td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: #00A2DC; color: white; text-align: center;">Introducción</td>
+                            <td><textarea name="" id="" cols="30" rows="5" style="resize: none; border: 1px #00A2DC solid" class="form-control"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td  style="background-color: #F8B887; color: white; text-align: center;">Desarrollo</td>
+                            <td><textarea name="" id="" cols="30" rows="5" style="resize: none; border: 1px #F8B887 solid" class="form-control"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td  style="background-color: #A863A5; color: white; text-align: center;">Conclusión</td>
+                            <td><textarea name="" id="" cols="30" rows="5" style="resize: none; border: 1px #A863A5 solid" class="form-control"></textarea></td>
+                        </tr>
+                    </table>
+                    </div>
+
                 </div>
-                <br>
-                <b style="color:#A863A5">Mi texto:</b>
-                <div align="center">
-                    <textarea style="resize: none;" name="" id="" cols="30" rows="5" class="form-control"></textarea>
-                </div>
-                <br>
+
             </div>
         </div>
     </div>
@@ -199,10 +217,11 @@
     <script src="js/helper.js"></script>
     <script src="js/activities.js"></script>
     <script src="js/Utilitario.js"></script>
+    <script src="js/actividad1.js"></script>
     <script type="text/javascript">
     var titulos = "aplico";
     $("#txtNota").html("0");
-    $("#n_pagina").html("21");
+    $("#n_pagina").html("35");
     </script>
 </body>
 

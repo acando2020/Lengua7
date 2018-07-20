@@ -19,22 +19,16 @@
 .cajas {
     max-width: 95%;
     max-height: 200px;
-    border: 1px #005ca4 solid;
+    border: 1px #98007f solid;
     border-radius: 5px;
     padding: 15px;
     margin: 5px;
 }
 
 .cajas1 {
-    width: 40px;
-    border: solid;
-    border-width: 1px;
-    border-color: #964091;
-    text-align: center;
-    padding: 5px;
-    border-radius: 5px;
-}
 
+    border: 1px #98007f solid;
+}
 
 .actividad1 {
     background: #fff;
@@ -67,7 +61,7 @@
     <div id="nota-informativa" class="nota-ayuda">
         <button type="button" class="close" onclick="cerrar_ayuda()" aria-label="Close"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></button>
         <!--ACA ESCRIBIR TEXTO DE LA AYUDA DE LA ACTIVIDAD-->
-        Identifica los cinco elementos en la leyenda sobre la diosa Umiña y escribe la respuesta en los espacios en blanco.
+        Escribe la respuesta en los espacios en blanco.
         <br>
         <span id="ayudas"></span>
     </div>
@@ -107,7 +101,7 @@
                     </button>
                 </li>
                 <li>
-                    <button class="btn button button_3 btnCalificar mytooltip" data-info="Calificar / Comprobar" id="bt_comprobar" onclick="VerificarC()">
+                    <button class="btn button button_3 btnCalificar mytooltip" data-info="Calificar / Comprobar" id="bt_comprobar" onclick="resolverN1()">
                         <span class="glyphicon glyphicon-check" aria-hidden="true"></span>
                     </button>
                 </li>
@@ -142,240 +136,17 @@
             <div class="panel-body">
                 <!--pregunats de la actividad-->
                 <div class="text-question">
-                    <b style="color:#005CA9">1.</b> <b>Completa</b> el siguiente crucigrama.</span>
-                    <br>
+                    <input type="number" id="nt1_1" placeholder="0" class="nota-abierta cajas1" min="0" max="5"><span> <b style="color:#005CA9">1.</b> <b>Explica</b>. ¿Por qué crees que las palabras de la primera fila se escriben con <span style="color:#22a9f7">b</span>?</span><br>
+                    <br><img src="img/i1_p32_act42.jpg" alt="" class="img-responsive">
                 </div>
-                <br>
-                <div align="center" class="col-sm">
-                    <div style="float: left;width: 30%">
-                        <img src="img/i1_p32_act43.png" alt="" class="img-responsive">
-                    </div>
-                    <div style="float: left;width: 70%" class="table-responsive">
-                        <table style="width: auto;">
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td style="text-align: center;"><b><span style="color:#964091">2 ▼</span></b></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td style="text-align: center;"><b><span style="color:#964091">1 ▼</span></b></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <input type="text" class="form-control cajas1" id="N0">
-                                </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <input type="text" class="form-control cajas1" id="A0">
-                                </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <input type="text" class="form-control cajas1" id="N1">
-                                </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <input type="text" class="form-control cajas1" id="A1">
-                                </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: right;"><b><span style="color:#964091">5►</span></b></td>
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control cajas1" id="O0">
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control cajas1" id="O1">
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control cajas1" id="N2">
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control cajas1" id="O2">
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control cajas1" id="O3">
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control cajas1" id="O4">
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control cajas1" id="O5">
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control cajas1" id="A2">
-                                </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <input type="text" class="form-control cajas1" id="N3">
-                                </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <input type="text" class="form-control cajas1" id="A3">
-                                </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: right;"><b><span style="color:#964091">4►</span></b></td>
-                                <td>
-                                    <input type="text" class="form-control cajas1" id="G0">
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control cajas1" id="G1">
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control cajas1" id="N4">
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control cajas1" id="G2">
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control cajas1" id="G3">
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control cajas1" id="G4">
-                                </td>
-                                <td></td>
-                                <td>
-                                    <input type="text" class="form-control cajas1" id="A4">
-                                </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <input type="text" class="form-control cajas1" id="A5">
-                                </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <input type="text" class="form-control cajas1" id="A6">
-                                </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td style="text-align: right;"><b><span style="color:#964091">3►</span></b></td>
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control cajas1" id="A7">
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control cajas1" id="B0">
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control cajas1" id="B1">
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control cajas1" id="B2">
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control cajas1" id="B3">
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control cajas1" id="B4">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <input type="text" class="form-control cajas1" id="A8">
-                                </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </table>
-                    </div>
+                <div>
+                    <br><input type="text" placeholder="Escribe tu respuesta" class="form-control">
+                </div><br>
+                <div class="text-question">
+                    <input type="number" id="nt1_2" placeholder="0" class="nota-abierta cajas1" min="0" max="5"><span> <b style="color:#005CA9">2.</b> ¿Por qué crees que las otras palabras se escriben con <span style="color:#22a9f7">v</span>?</span>
+                </div>
+                <div>
+                    <br><input type="text" placeholder="Escribe tu respuesta" class="form-control">
                 </div>
             </div>
         </div>
@@ -423,15 +194,11 @@
     <script src="js/helper.js"></script>
     <script src="js/activities.js"></script>
     <script src="js/Utilitario.js"></script>
-    <script src="js/actividad43.js"></script>
+    <script src="js/actividad1.js"></script>
     <script type="text/javascript">
-    var titulos = "aplico";
+    var titulos = "reflexiono";
     $("#txtNota").html("0");
     $("#n_pagina").html("32");
-    $("input").prop('maxlength', 1);
-    $("input").keyup(function() {
-        this.value = this.value.toUpperCase();
-    });
     </script>
 </body>
 

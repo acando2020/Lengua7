@@ -19,7 +19,7 @@
 .cajas {
     max-width: 95%;
     max-height: 200px;
-    border: 1px #005ca4 solid;
+    border: 1px #98007f solid;
     border-radius: 5px;
     padding: 15px;
     margin: 5px;
@@ -27,7 +27,7 @@
 
 .cajas1 {
 
-    border: 1px #005ca4 solid;
+    border: 1px #98007f solid;
 }
 
 .actividad1 {
@@ -54,27 +54,6 @@
 
 #cabecera .badge {
     background-color: #232956;
-}
-
-.pintar {
-    background: #F28E77;
-    color: #fff;
-    padding: 2px;
-    border-radius: 50px;
-}
-
-.pintar2 {
-    background: #A78BC0;
-    color: #fff;
-    padding: 2px;
-    border-radius: 50px;
-}
-
-.pintar3 {
-    background: #CD75AD;
-    color: #fff;
-    padding: 2px;
-    border-radius: 50px;
 }
 </style>
 
@@ -122,7 +101,7 @@
                     </button>
                 </li>
                 <li>
-                    <button class="btn button button_3 btnCalificar mytooltip" data-info="Calificar / Comprobar" id="bt_comprobar" onclick="resolverN47()">
+                    <button class="btn button button_3 btnCalificar mytooltip" data-info="Calificar / Comprobar" id="bt_comprobar" onclick="resolverN46()">
                         <span class="glyphicon glyphicon-check" aria-hidden="true"></span>
                     </button>
                 </li>
@@ -157,115 +136,26 @@
             <div class="panel-body">
                 <!--pregunats de la actividad-->
                 <div class="text-question">
-                    <input type="number" id="nt47_1" placeholder="0" class="nota-abierta cajas1" min="0" max="10"><span> <b style="color:#005CA9">1.</b> <b>Escribe</b> el femenino de estas palabras.</span>
+                    <input type="number" placeholder="0" id="nt46_1" class="nota-abierta cajas1" min="0" max="5"><span> <b style="color:#005CA9">1.</b> Infiere. ¿Qué significa la terminación <b style="color:#22A9F7">–ívoro</b> ?</span>
+                </div>
+                <div>
+                    <img class="img-responsive" src="img/i1_p33_act46.jpg"></img>
+                    <input type="text" name="" class="form-control cajas1" placeholder="Escribe tu respuesta">
                 </div>
                 <br>
-                <div class="table-responsive">
+                <div class="text-question">
+                    <input type="number" placeholder="0" id="nt46_2" class="nota-abierta cajas1" min="0" max="5"><span> <b style="color:#005CA9">2.</b> <b>Deduce</b> la regla.</span>
+                </div>
+                <br>
+                <div>
                     <table style="width: auto;">
                         <tr>
-                            <td>
-                                <h4><span class="pintar">Carnívoro</span></h4></td>
-                            <td style="width: 300px;">
-                                <input class="form-control" placeholder="Escribe tu respuesta"></input>
-                            </td>
-                            <td>
-                                <h4><span class="pintar2">Insectívoro</span></h4></td>
-                            <td style="width: 300px;">
-                                <input class="form-control" placeholder="Escribe tu respuesta"></input>
-                            </td>
-                            <td>
-                                <h4><span class="pintar3">Omnívoro</span></h4></td>
-                            <td style="width: 300px;">
-                                <input class="form-control" placeholder="Escribe tu respuesta"></input>
+                            <td><h4>Se escriben con <b style="color:#22A9F7">v</b></h4></td>
+                            <td style="width: 87%">
+                                <input type="text" name="" class="form-control cajas1" placeholder="Escribe tu respuesta">
                             </td>
                         </tr>
                     </table>
-                </div>
-                <br>
-                <div class="text-question">
-                    <input type="number" id="nt47_2" placeholder="0" class="nota-abierta cajas1" min="0" max="10"><span> <b style="color:#005CA9">2.</b> <b>Completa</b> las frases. Si lo necesitas, <b>consulta</b> el diccionario.</span>
-                    <br>
-                    <br>
-                    <div align="left">
-                        <form class="form-horizontal" style="align-items: left;">
-                            <div class="form-group">
-                                <label class="col-sm-6"><b style="color:#005CA9">a.</b> Los animales que comen frutas son</label>
-                                <div class="col-sm-6">
-                                    <input class="form-control" placeholder="Escribe tu respuesta" type="text" placeholder="">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-2 ">Por ejemplo,</label>
-                                <div class="col-sm-10">
-                                    <input class="form-control" placeholder="Escribe tu respuesta" type="text" placeholder="">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-6 "><b style="color:#005CA9">b.</b> Los animales que se alimentan de néctar son</label>
-                                <div class="col-sm-6">
-                                    <input class="form-control" placeholder="Escribe tu respuesta" type="text" placeholder="">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-2 ">Por ejemplo,</label>
-                                <div class="col-sm-10">
-                                    <input class="form-control" placeholder="Escribe tu respuesta" type="text" placeholder="">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-6 "><b style="color:#005CA9">c.</b> Los animales que comen diversos alimentos se llaman</label>
-                                <div class="col-sm-6">
-                                    <input class="form-control" placeholder="Escribe tu respuesta" type="text" placeholder="">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-2 ">Por ejemplo,</label>
-                                <div class="col-sm-10">
-                                    <input class="form-control" placeholder="Escribe tu respuesta" type="text" placeholder="">
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <br>
-                <div class="text-question">
-                    <input type="number" id="nt47_3" placeholder="0" class="nota-abierta cajas1" min="0" max="10"><span> <b style="color:#005CA9">3.</b> <b>Inventa</b> nombres creativos.</span>
-                    <br>
-                    <h4>Si el que come hierba es herbívoro,</h4>
-                    <div align="left">
-                        <form class="form-horizontal" style="align-items: left;">
-                            <div class="form-group">
-                                <label class="col-sm-3">el que se come las uñas es</label>
-                                <div class="col-sm-9">
-                                    <input class="form-control" style="border:none; border-bottom: 1px dotted #000000;" placeholder="Escribe tu respuesta" type="text" placeholder="">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-3 ">y el que se come las tildes es</label>
-                                <div class="col-sm-9">
-                                    <input class="form-control" style="border:none; border-bottom: 1px dotted #000000;" placeholder="Escribe tu respuesta" type="text" placeholder="">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-3 ">el que come cemento es</label>
-                                <div class="col-sm-9">
-                                    <input class="form-control" style="border:none; border-bottom: 1px dotted #000000;" placeholder="Escribe tu respuesta" type="text" placeholder="">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-3 ">el que come cuentos es</label>
-                                <div class="col-sm-9">
-                                    <input class="form-control" style="border:none; border-bottom: 1px dotted #000000;" placeholder="Escribe tu respuesta" type="text" placeholder="">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-3 ">y el que come</label>
-                                <div class="col-sm-9">
-                                    <input class="form-control" style="border:none; border-bottom: 1px dotted #000000;" placeholder="Escribe tu respuesta" type="text" placeholder="">
-                                </div>
-                            </div>
-                        </form>
-                    </div>
                 </div>
             </div>
         </div>
@@ -312,10 +202,10 @@
     <script src="js/screenfull.js"></script>
     <script src="js/helper.js"></script>
     <script src="js/activities.js"></script>
-    <script src="js/Utilitario.js"></script>
-    <script src="js/actividad47.js"></script>
+    <script src="js/Utilitario.js"></script>    
+    <script src="js/actividad46.js"></script>
     <script type="text/javascript">
-    var titulos = "aplico";
+    var titulos = "reflexiono";
     $("#txtNota").html("0");
     $("#n_pagina").html("33");
     </script>

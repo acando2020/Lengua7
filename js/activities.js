@@ -355,7 +355,8 @@ function calificar_abierta() {
     }else if (vacio > 0) {
         alert('todas las preguntas se deben evaluar');
         $(elList[i]).removeClass('no-valid')
-        
+
+
     } else {
         $('#txtNota').html(nt.toFixed(2) + ' ');
         // desabilitar_by_class('nota-abierta');
@@ -364,7 +365,7 @@ function calificar_abierta() {
         document.getElementById('bt_comprobar').disabled = true;
         $(".btnGuardar").removeClass('disabled')
     }
-    
+
 
 
 }

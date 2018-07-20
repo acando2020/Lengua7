@@ -19,7 +19,7 @@
 .cajas {
     max-width: 95%;
     max-height: 200px;
-    border: 1px #005ca4 solid;
+    border: 1px #98007f solid;
     border-radius: 5px;
     padding: 15px;
     margin: 5px;
@@ -27,7 +27,7 @@
 
 .cajas1 {
 
-    border: 1px #005ca4 solid;
+    border: 1px #98007f solid;
 }
 
 .actividad1 {
@@ -101,7 +101,7 @@
                     </button>
                 </li>
                 <li>
-                    <button class="btn button button_3 btnCalificar mytooltip" data-info="Calificar / Comprobar" id="bt_comprobar" onclick="resolverN40()">
+                    <button class="btn button button_3 btnCalificar mytooltip" data-info="Calificar / Comprobar" id="bt_comprobar" onclick="calificar_abierta()">
                         <span class="glyphicon glyphicon-check" aria-hidden="true"></span>
                     </button>
                 </li>
@@ -136,33 +136,21 @@
             <div class="panel-body">
                 <!--pregunats de la actividad-->
                 <div class="text-question">
-                    <input type="number" id="nt40_1" placeholder="0" class="nota-abierta cajas1" min="0" max="10"><span> <b style="color:#005CA9">1.</b> <b>Escribe</b> una comparación de igualdad de calidad entre dos películas que hayas visto.</span>
+                   <span> <b style="color:#005CA9">1.</b> <b>Observa</b> cómo se usa el nexo como en estas oraciones.</span>
                 </div>
-                <br>
-                <div>
-                    <input type="text" title="El estudiante debe usar la construcción tan + adjetivo + como." placeholder="El estudiante debe usar la construcción tan + adjetivo + como." class="form-control cajas1">
+                <div align="left">
+                    <h4>
+                        <p>El segundo capítulo estuvo <span style="color:#98007f">tan</span> interesante <span style="color:#98007f">como</span> el primero.</p>
+                        <p>¡Este libro tiene <span style="color:#98007f">tantas</span> páginas <span style="color:#98007f">como</span> la guía telefónica!</p>
+
+                    </h4>
+
                 </div>
-                <br>
                 <div class="text-question">
-                    <input type="number" id="nt40_2" placeholder="0" class="nota-abierta cajas1" min="0" max="10"><span> <b style="color:#005CA9">2.</b> <b>Identifica</b> qué construcción comparativa se usó en esta oración:</span>
-                    <h4>Ese lugar tenía tantos atractivos turísticos como mi ciudad.</h4>
+                    <input type="number"  placeholder="0" class="nota-abierta cajas1" min="0" max="10"><span> <b style="color:#005CA9">2.</b> ¿Qué elementos se comparan en la primera oración? ¿En qué se parecen esos dos elementos?</span>
                 </div>
-                <div>
+                <div><br>
                     <input type="text" class="form-control cajas1" placeholder="Escribe tu respuesta">
-                </div>
-                <br>
-                <div class="text-question">
-                    <input type="number" id="nt40_3" placeholder="0" class="nota-abierta cajas1" min="0" max="10"><span> <b style="color:#005CA9">3.</b> <b>Redacta</b> una comparación que use la forma verbo + como.</span>
-                </div>
-                <div><br>
-                    <input type="text" class="form-control cajas1" title="El estudiante debe usar la construcción verbo + como." placeholder="El estudiante debe usar la construcción verbo + como.">
-                </div><br>
-                 <div class="text-question">
-                    <input type="number" id="nt40_4" placeholder="0" class="nota-abierta cajas1" min="0" max="10"><span> <b style="color:#005CA9">4.</b> <b>Escribe</b> nuevamente este párrafo usando el conector <b style="color:#2AB4D3">como</b>.</span>
-                    <h4 style="text-align: justify;">La ciudad del Norte era hermosa. Igual de hermosa era la ciudad vecina del Sur. La ciudad del Norte tenía muchísimos parques. La ciudad del Sur también tenía muchos parques. En la ciudad del Norte ese invierno nevó muchísimo. Nunca antes había nevado así.</h4>
-                </div>
-                <div><br>
-                    <textarea name="" id="" cols="30" rows="5" class="form-control cajas1" placeholder="Escribe tu respuesta"></textarea>
                 </div>
             </div>
         </div>
@@ -210,9 +198,8 @@
     <script src="js/helper.js"></script>
     <script src="js/activities.js"></script>
     <script src="js/Utilitario.js"></script>
-    <script src="js/actividad40.js"></script>
     <script type="text/javascript">
-    var titulos = "aplico";
+    var titulos = "reflexiono";
     $("#txtNota").html("0");
     $("#n_pagina").html("31");
     </script>

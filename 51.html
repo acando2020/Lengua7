@@ -17,16 +17,12 @@
 </head>
 <style type="text/css">
 .cajas {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 95%;
+    max-height: 200px;
     border: 1px #005ca4 solid;
     border-radius: 5px;
     padding: 15px;
     margin: 5px;
-}
-
-.bordestablas {
-    border: 1px #0072AB solid;
 }
 
 .cajas1 {
@@ -34,23 +30,20 @@
     border: 1px #005ca4 solid;
 }
 
-.encierra {
-    background: rgba(153, 204, 255, 0.8);
-    color: #fff;
-}
-
 .actividad1 {
     background: #fff;
 }
 
 .correcto {
-    color: white;
+    color: #ffffff;
     background-color: #8FB435;
+    font-weight: 700;
 }
 
 .incorrecto {
-    color: white;
+    color: #ffffff;
     background-color: #E76E80;
+    font-weight: 700;
 }
 
 .desactivar {
@@ -62,13 +55,17 @@
 #cabecera .badge {
     background-color: #232956;
 }
+
+.bordeTabla {
+    border: 1px #A863A5 solid;
+}
 </style>
 
 <body>
     <div id="nota-informativa" class="nota-ayuda">
         <button type="button" class="close" onclick="cerrar_ayuda()" aria-label="Close"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></button>
         <!--ACA ESCRIBIR TEXTO DE LA AYUDA DE LA ACTIVIDAD-->
-        Relaciona cada parte del texto con su función, arrastrando la imagen al lugar que le pertenece.
+        Escribe la respuesta en los espacios en blanco.
         <br>
         <span id="ayudas"></span>
     </div>
@@ -143,16 +140,69 @@
             <div class="panel-body">
                 <!--pregunats de la actividad-->
                 <div class="text-question">
-                    <img src="img/trabajamos_juntos.png" alt="" class="img-responsive"><br>
-                    <input type="number" placeholder="0" class="nota-abierta cajas1" min="0" max="10"><span> <b style="color:#005CA9">1.</b> <b>Trabaja</b> con un compañero. Cada uno <b>invente</b> un pequeño texto con función poética. <b>Repítanlo</b> oralmente para su compañero.</span>
-                    <br>
+                    <img class="img-responsive" src="img/revisotxt.png"></img>
+                    <input type="number" id="nt1_1" placeholder="0" class="nota-abierta" min="0" max="5"><span> <b style="color:#005CA9"> </b> <b>Verifica</b> si tu texto tiene los siguientes elementos.</span>
+                    <div align="center">
+                        <table style="width: auto;">
+                            <thead>
+                                <tr>
+                                    <td class="bordeTabla" style="text-align: left;">Un título informativo y atractivo</td>
+                                    <td class="bordeTabla">
+                                        <input class="form-control">
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td class="bordeTabla" style="background-color: #F1EBF6;text-align: left;">La introducción tiene:
+                                    <br> • los datos del libro.
+                                    <br> • un resumen.
+                                    <br> • una tesis o afirmación sobre la leyenda.</td>
+                                <td class="bordeTabla">
+                                    <textarea class="form-control" style="resize: none;" rows="5"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bordeTabla" style="background-color: #FFF3D8;text-align: left;">El desarrollo presenta argumentos que apoyan la tesis.</td>
+                                <td class="bordeTabla">
+                                    <input class="form-control" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bordeTabla" style="text-align: left;">La conclusión sintetiza la información y da una recomendación.</td>
+                                <td class="bordeTabla">
+                                    <input class="form-control" type="text">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
                 <br>
-                <b style="color:#A863A5">Mi texto:</b>
-                <div align="center">
-                    <textarea style="resize: none;" name="" id="" cols="30" rows="5" class="form-control"></textarea>
+                <div class="text-question">
+                    <img class="img-responsive" src="img/publicotxt.png"></img>
+                    <input type="number" placeholder="0" id="nt1_2" class="nota-abierta" min="0" max="5"><span> <b style="color:#005CA9"> </b> <b>Escoge</b> una de las siguientes opciones para publicar tu reseña:</span>
+                    <div align="center">
+                        <table class="table" style="width: 50%;">
+                            <tr>
+                                <td style="background-color: #D9EDFA">La cartelera de la clase</td>
+                                <td>
+                                    <input type="radio" name="optradio">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: #D6EBE4">En un libro de reseñas junto con las de otros compañeros</td>
+                                <td>
+                                    <input type="radio" name="optradio">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: #FFF0D6">En un video en el que leas tu reseña</td>
+                                <td>
+                                    <input type="radio" name="optradio">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
-                <br>
             </div>
         </div>
     </div>
@@ -199,10 +249,11 @@
     <script src="js/helper.js"></script>
     <script src="js/activities.js"></script>
     <script src="js/Utilitario.js"></script>
+    <script src="js/actividad1.js"></script>
     <script type="text/javascript">
     var titulos = "aplico";
     $("#txtNota").html("0");
-    $("#n_pagina").html("21");
+    $("#n_pagina").html("35");
     </script>
 </body>
 

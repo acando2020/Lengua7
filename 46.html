@@ -19,7 +19,7 @@
 .cajas {
     max-width: 95%;
     max-height: 200px;
-    border: 1px #98007f solid;
+    border: 1px #009277 solid;
     border-radius: 5px;
     padding: 15px;
     margin: 5px;
@@ -27,7 +27,7 @@
 
 .cajas1 {
 
-    border: 1px #98007f solid;
+    border: 1px #009277 solid;
 }
 
 .actividad1 {
@@ -101,7 +101,7 @@
                     </button>
                 </li>
                 <li>
-                    <button class="btn button button_3 btnCalificar mytooltip" data-info="Calificar / Comprobar" id="bt_comprobar" onclick="resolverN46()">
+                    <button class="btn button button_3 btnCalificar mytooltip" data-info="Calificar / Comprobar" id="bt_comprobar" onclick="calificar_abierta()">
                         <span class="glyphicon glyphicon-check" aria-hidden="true"></span>
                     </button>
                 </li>
@@ -136,27 +136,12 @@
             <div class="panel-body">
                 <!--pregunats de la actividad-->
                 <div class="text-question">
-                    <input type="number" placeholder="0" id="nt46_1" class="nota-abierta cajas1" min="0" max="5"><span> <b style="color:#005CA9">1.</b> Infiere. ¿Qué significa la terminación <b style="color:#22A9F7">–ívoro</b> ?</span>
+                    <input type="number" placeholder="0" class="nota-abierta cajas1" min="0" max="10"><span> <b style="color:#005CA9">1.</b> <b>Escribe</b>Escribe dos reglas del uso de la <b style="color:#22A9F7">v</b> que recuerdes.</span>
                 </div>
                 <div>
-                    <img class="img-responsive" src="img/i1_p33_act46.jpg"></img>
-                    <input type="text" name="" class="form-control cajas1" placeholder="Escribe tu respuesta">
+                    <textarea name="" id="" class="form-control cajas" placeholder="Escribe tu respuesta"></textarea>
                 </div>
-                <br>
-                <div class="text-question">
-                    <input type="number" placeholder="0" id="nt46_2" class="nota-abierta cajas1" min="0" max="5"><span> <b style="color:#005CA9">2.</b> <b>Deduce</b> la regla.</span>
-                </div>
-                <br>
-                <div>
-                    <table style="width: auto;">
-                        <tr>
-                            <td><h4>Se escriben con <b style="color:#22A9F7">v</b></h4></td>
-                            <td style="width: 87%">
-                                <input type="text" name="" class="form-control cajas1" placeholder="Escribe tu respuesta">
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+               
             </div>
         </div>
     </div>
@@ -202,10 +187,9 @@
     <script src="js/screenfull.js"></script>
     <script src="js/helper.js"></script>
     <script src="js/activities.js"></script>
-    <script src="js/Utilitario.js"></script>    
-    <script src="js/actividad46.js"></script>
+    <script src="js/Utilitario.js"></script>
     <script type="text/javascript">
-    var titulos = "reflexiono";
+    var titulos = "exploro";
     $("#txtNota").html("0");
     $("#n_pagina").html("33");
     </script>

@@ -101,7 +101,7 @@
                     </button>
                 </li>
                 <li>
-                    <button class="btn button button_3 btnCalificar mytooltip" data-info="Calificar / Comprobar" id="bt_comprobar" onclick="calificar_abierta()">
+                    <button class="btn button button_3 btnCalificar mytooltip" data-info="Calificar / Comprobar" id="bt_comprobar" onclick="resolverN1()">
                         <span class="glyphicon glyphicon-check" aria-hidden="true"></span>
                     </button>
                 </li>
@@ -136,7 +136,7 @@
             <div class="panel-body">
                 <!--pregunats de la actividad-->
                 <div class="text-question">
-                    <input type="number" placeholder="0" class="nota-abierta cajas1" min="0" max="10"><span> <b style="color:#005CA9">1. </b><b>Reescribe</b> estas oraciones usando conectores condicionales.</span>
+                    <input type="number" id="nt1_1" placeholder="0" class="nota-abierta cajas1" min="0" max="10"><span> <b style="color:#005CA9">1. </b><b>Reescribe</b> estas oraciones usando conectores condicionales.</span>
                 </div>
                 <div>
                     <h4>
@@ -149,7 +149,7 @@
                     <input type="text" placeholder="Escribe tu respuesta" class="form-control cajas1"><br>
                 </div>
                 <div class="text-question">
-                    <input type="number" placeholder="0" class="nota-abierta cajas1" min="0" max="10"><span> <b style="color:#005CA9">2. </b><b>Completa</b> estas oraciones usando conectores condicionales..</span>
+                    <input type="number" id="nt1_2" placeholder="0" class="nota-abierta cajas1" min="0" max="10"><span> <b style="color:#005CA9">2. </b><b>Completa</b> estas oraciones usando conectores condicionales..</span>
                 </div>
                 <div>
                     <table >
@@ -213,6 +213,7 @@
     <script src="js/helper.js"></script>
     <script src="js/activities.js"></script>
     <script src="js/Utilitario.js"></script>
+    <script src="js/actividad1.js"></script>
     <script type="text/javascript">
     var titulos = "aplico";
     $("#txtNota").html("0");

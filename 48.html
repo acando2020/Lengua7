@@ -55,6 +55,27 @@
 #cabecera .badge {
     background-color: #232956;
 }
+
+.pintar {
+    background: #F28E77;
+    color: #fff;
+    padding: 2px;
+    border-radius: 50px;
+}
+
+.pintar2 {
+    background: #A78BC0;
+    color: #fff;
+    padding: 2px;
+    border-radius: 50px;
+}
+
+.pintar3 {
+    background: #CD75AD;
+    color: #fff;
+    padding: 2px;
+    border-radius: 50px;
+}
 </style>
 
 <body>
@@ -101,7 +122,7 @@
                     </button>
                 </li>
                 <li>
-                    <button class="btn button button_3 btnCalificar mytooltip" data-info="Calificar / Comprobar" id="bt_comprobar" onclick="resolverN1()">
+                    <button class="btn button button_3 btnCalificar mytooltip" data-info="Calificar / Comprobar" id="bt_comprobar" onclick="resolverN47()">
                         <span class="glyphicon glyphicon-check" aria-hidden="true"></span>
                     </button>
                 </li>
@@ -136,122 +157,115 @@
             <div class="panel-body">
                 <!--pregunats de la actividad-->
                 <div class="text-question">
-                    <img class="img-responsive" src="img/planificotxt.png"></img>
-                    <span> <b style="color:#005CA9">1.</b> Con la guía de tu profesor, <b>selecciona</b> un libro de leyendas y <b>escoge</b> la que más te guste.</span>
-                </div>
-                <div class="text-question">
-                    <input type="number" id="nt1_2" placeholder="0" class="nota-abierta cajas1" min="0" max="5"><span> <b style="color:#005CA9">2.</b> <b>Crea</b> una ficha con los datos del libro.</span>
-                </div>
-                <div align="center">
-                    <table style="width: 80%;">
-                        <tr>
-                            <td style="background-color: #FFF2CE;">Título del libro:</td>
-                            <td>
-                                <input class="form-control" style="border:none; border-bottom: 1px dotted #1D1D1B;" type="text">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="background-color: #FFF2CE;">Ilustrador:</td>
-                            <td>
-                                <input class="form-control" style="border:none; border-bottom: 1px dotted #1D1D1B;" type="text">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="background-color: #FFF2CE;">Editorial:</td>
-                            <td>
-                                <input class="form-control" style="border:none; border-bottom: 1px dotted #1D1D1B;" type="text">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="background-color: #FFF2CE;">Año de publicación:</td>
-                            <td>
-                                <input class="form-control" style="border:none; border-bottom: 1px dotted #1D1D1B;" type="text">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="background-color: #FFF2CE;">Lugar de publicación:</td>
-                            <td>
-                                <input class="form-control" style="border:none; border-bottom: 1px dotted #1D1D1B;" type="text">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="background-color: #FFF2CE;">Idioma original:</td>
-                            <td>
-                                <input class="form-control" style="border:none; border-bottom: 1px dotted #1D1D1B;" type="text">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="background-color: #FFF2CE;">Título de la leyenda:</td>
-                            <td>
-                                <input class="form-control" style="border:none; border-bottom: 1px dotted #1D1D1B;" type="text">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="background-color: #FFF2CE;">Lugar de origen de la leyenda:</td>
-                            <td>
-                                <input class="form-control" style="border:none; border-bottom: 1px dotted #1D1D1B;" type="text">
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="text-question">
-                    <input type="number" id="nt1_2" placeholder="0" class="nota-abierta cajas1" min="0" max="5"><span> <b style="color:#005CA9">3.</b> <b>Contesta</b> en una sola línea, ¿de qué trata la leyenda?</span>
-                    <br>
-                    <br>
-                    <input type="text" placeholder="Escribe tu respuesta" name="" class="form-control">
+                    <input type="number" id="nt47_1" placeholder="0" class="nota-abierta cajas1" min="0" max="10"><span> <b style="color:#005CA9">1.</b> <b>Escribe</b> el femenino de estas palabras.</span>
                 </div>
                 <br>
-                <div class="text-question">
-                    <input type="number" id="nt1_2" placeholder="0" class="nota-abierta cajas1" min="0" max="5"><span> <b style="color:#005CA9">4.</b> <b>Completa</b> la idea:</span>
-                    <table>
+                <div class="table-responsive">
+                    <table style="width: auto;">
                         <tr>
                             <td>
-                                <h4>La historia es</h4></td>
-                            <td>
-                                <input size="70" class="form-control" type="text" placeholder="Escribe tu respuesta"></input>
+                                <h4><span class="pintar">Carnívoro</span></h4></td>
+                            <td style="width: 300px;">
+                                <input class="form-control" placeholder="Escribe tu respuesta"></input>
                             </td>
                             <td>
-                                <h4>porque</h4></td>
+                                <h4><span class="pintar2">Insectívoro</span></h4></td>
+                            <td style="width: 300px;">
+                                <input class="form-control" placeholder="Escribe tu respuesta"></input>
+                            </td>
                             <td>
-                                <input size="70" class="form-control" type="text" placeholder="Escribe tu respuesta"></input>
+                                <h4><span class="pintar3">Omnívoro</span></h4></td>
+                            <td style="width: 300px;">
+                                <input class="form-control" placeholder="Escribe tu respuesta"></input>
                             </td>
                         </tr>
                     </table>
                 </div>
                 <br>
                 <div class="text-question">
-                    <input type="number" id="nt1_2" placeholder="0" class="nota-abierta cajas1" min="0" max="5"><span> <b style="color:#005CA9">5.</b> <b>Evalúa</b> lo que te gustó y lo que no te gustó.</span>
+                    <input type="number" id="nt47_2" placeholder="0" class="nota-abierta cajas1" min="0" max="10"><span> <b style="color:#005CA9">2.</b> <b>Completa</b> las frases. Si lo necesitas, <b>consulta</b> el diccionario.</span>
                     <br>
-                    <div align="center">
-                        <table class="table" style="width: 80%;" border="1">
-                            <tr>
-                                <td style="background-color: #E3D5EA "><b>Me gustó…</b></td>
-                                <td style="background-color: #FEE5CE"><b>No me gustó…</b></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <textarea class="form-control" style="border: 1px #E3D5EA solid; resize: none;" cols="30" rows="5"></textarea>
-                                </td>
-                                <td>
-                                    <textarea class="form-control" style="border: 1px #FEE5CE solid; resize: none;" cols="30" rows="5"></textarea>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <textarea class="form-control" style="border: 1px #E3D5EA solid; resize: none;" cols="30" rows="5"></textarea>
-                                </td>
-                                <td>
-                                    <textarea class="form-control" style="border: 1px #FEE5CE solid; resize: none;" cols="30" rows="5"></textarea>
-                                </td>
-                            </tr>
-                        </table>
+                    <br>
+                    <div align="left">
+                        <form class="form-horizontal" style="align-items: left;">
+                            <div class="form-group">
+                                <label class="col-sm-6"><b style="color:#005CA9">a.</b> Los animales que comen frutas son</label>
+                                <div class="col-sm-6">
+                                    <input class="form-control" placeholder="Escribe tu respuesta" type="text" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 ">Por ejemplo,</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" placeholder="Escribe tu respuesta" type="text" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-6 "><b style="color:#005CA9">b.</b> Los animales que se alimentan de néctar son</label>
+                                <div class="col-sm-6">
+                                    <input class="form-control" placeholder="Escribe tu respuesta" type="text" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 ">Por ejemplo,</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" placeholder="Escribe tu respuesta" type="text" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-6 "><b style="color:#005CA9">c.</b> Los animales que comen diversos alimentos se llaman</label>
+                                <div class="col-sm-6">
+                                    <input class="form-control" placeholder="Escribe tu respuesta" type="text" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 ">Por ejemplo,</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" placeholder="Escribe tu respuesta" type="text" placeholder="">
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
+                <br>
                 <div class="text-question">
-                    <input type="number" id="nt1_2" placeholder="0" class="nota-abierta cajas1" min="0" max="5"><span> <b style="color:#005CA9">6.</b> <b>Califica</b> el texto que leíste coloreando las estrellas y <b>explica</b> por qué pusiste esa calificación.</span>
+                    <input type="number" id="nt47_3" placeholder="0" class="nota-abierta cajas1" min="0" max="10"><span> <b style="color:#005CA9">3.</b> <b>Inventa</b> nombres creativos.</span>
                     <br>
-                    <br>
-                    <input type="text" placeholder="Escribe tu respuesta" name="" class="form-control">
+                    <h4>Si el que come hierba es herbívoro,</h4>
+                    <div align="left">
+                        <form class="form-horizontal" style="align-items: left;">
+                            <div class="form-group">
+                                <label class="col-sm-3">el que se come las uñas es</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" style="border:none; border-bottom: 1px dotted #000000;" placeholder="Escribe tu respuesta" type="text" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 ">y el que se come las tildes es</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" style="border:none; border-bottom: 1px dotted #000000;" placeholder="Escribe tu respuesta" type="text" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 ">el que come cemento es</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" style="border:none; border-bottom: 1px dotted #000000;" placeholder="Escribe tu respuesta" type="text" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 ">el que come cuentos es</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" style="border:none; border-bottom: 1px dotted #000000;" placeholder="Escribe tu respuesta" type="text" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 ">y el que come</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" style="border:none; border-bottom: 1px dotted #000000;" placeholder="Escribe tu respuesta" type="text" placeholder="">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -299,11 +313,11 @@
     <script src="js/helper.js"></script>
     <script src="js/activities.js"></script>
     <script src="js/Utilitario.js"></script>
-    <script src="js/actividad1.js"></script>
+    <script src="js/actividad48.js"></script>
     <script type="text/javascript">
     var titulos = "aplico";
     $("#txtNota").html("0");
-    $("#n_pagina").html("34");
+    $("#n_pagina").html("33");
     </script>
 </body>
 

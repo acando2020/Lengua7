@@ -19,7 +19,7 @@
 .cajas {
     max-width: 95%;
     max-height: 200px;
-    border: 1px #009277 solid;
+    border: 1px #005ca4 solid;
     border-radius: 5px;
     padding: 15px;
     margin: 5px;
@@ -27,7 +27,7 @@
 
 .cajas1 {
 
-    border: 1px #009277 solid;
+    border: 1px #005ca4 solid;
 }
 
 .actividad1 {
@@ -101,7 +101,7 @@
                     </button>
                 </li>
                 <li>
-                    <button class="btn button button_3 btnCalificar mytooltip" data-info="Calificar / Comprobar" id="bt_comprobar" onclick="calificar_abierta()">
+                    <button class="btn button button_3 btnCalificar mytooltip" data-info="Calificar / Comprobar" id="bt_comprobar" onclick="resolverN44()">
                         <span class="glyphicon glyphicon-check" aria-hidden="true"></span>
                     </button>
                 </li>
@@ -136,12 +136,27 @@
             <div class="panel-body">
                 <!--pregunats de la actividad-->
                 <div class="text-question">
-                    <input type="number" placeholder="0" class="nota-abierta cajas1" min="0" max="10"><span> <b style="color:#005CA9">1.</b> <b>Escribe</b>Escribe dos reglas del uso de la <b style="color:#22A9F7">v</b> que recuerdes.</span>
+                    <input type="number" id="nt44_1" placeholder="0" class="nota-abierta cajas1" min="0" max="10"><span> <b style="color:#005CA9">2.</b> Con dos de las palabras del crucigrama, <b>escribe</b> un párrafo corto.</span>
+                </div>
+                <br>
+                <div>
+                    <textarea style="resize: none;" type="text" placeholder="El texto debe contener las dos palabras correctamente escritas." class="form-control cajas1"></textarea>
+                </div>
+                <br>
+                <div class="text-question">
+                    <input type="number" id="nt44_2" placeholder="0" class="nota-abierta cajas1" min="0" max="10"><span> <b style="color:#005CA9">3.</b> <b>Busca</b> en el diccionario el significado de la palabra avocar.</h4><br>
                 </div>
                 <div>
-                    <textarea name="" id="" class="form-control cajas" placeholder="Escribe tu respuesta"></textarea>
+                    <br> <textarea style="resize: none;" type="text" class="form-control cajas1" placeholder="Escribe tu respuesta"></textarea>
                 </div>
-               
+                <br>
+                <div class="text-question">
+                    <input type="number" id="nt44_3" placeholder="0" class="nota-abierta cajas1" min="0" max="10"><span> <b style="color:#005CA9">4.</b> En un diccionario, <b>busca</b> tres palabras que comiencen con <b style="color:#22A9F7">abo-</b> y que sean nuevas para ti. <b>Escribe</b> una oración con cada una y <b>comparte</b> tu trabajo en clase.</span>
+                </div>
+                <div><br>
+                   <textarea style="resize: none;" type="text" class="form-control cajas1" placeholder="Escribe tu respuesta"> </textarea>
+                </div><br>
+
             </div>
         </div>
     </div>
@@ -188,10 +203,11 @@
     <script src="js/helper.js"></script>
     <script src="js/activities.js"></script>
     <script src="js/Utilitario.js"></script>
+    <script src="js/actividad45.js"></script>
     <script type="text/javascript">
-    var titulos = "exploro";
+    var titulos = "aplico";
     $("#txtNota").html("0");
-    $("#n_pagina").html("33");
+    $("#n_pagina").html("32");
     </script>
 </body>
 

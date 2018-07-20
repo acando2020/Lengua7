@@ -20,7 +20,7 @@ function finitimg() {
     var cajasImg = document.getElementsByClassName('imagen');
    testimg.sort(f_randomico);
     for (i = 0; i < cajasImg.length; i++) {
-        $('#' + cajasImg[i].id).html('<div class="table-responsive"><table class="table"><thead><tr><th><input type="number" placeholder="0" id="R' + testimg[i][0] + '" class="form-control cajas1" min="1" max="4"></th><th><textarea alt="' + testimg[i][0] + '" placeholder="' + testimg[i][0] + '" id="I' + testimg[i][0] + '" cols="30" rows="5" class="form-control cajas2" disabled></textarea></th></tr></thead></table></div>');
+        $('#' + cajasImg[i].id).html('<div class="table-responsive"><table class="table"><thead><tr><th><textarea alt="' + testimg[i][0] + '" placeholder="' + testimg[i][0] + '" id="I' + testimg[i][0] + '" cols="30" rows="5" style="resize:none;" class="form-control cajas2" disabled></textarea></th><th><input type="number" placeholder="0" id="R' + testimg[i][0] + '" class="form-control cajas1" min="1" max="4"></th></tr></thead></table></div>');
 
 
 
