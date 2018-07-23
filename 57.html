@@ -55,19 +55,45 @@
 #cabecera .badge {
     background-color: #232956;
 }
-.subrayar {
-    text-decoration: underline;
-}
-.correcto {
-    color: white;
-    background-color: #8FB435;
 
+.pintar {
+    background: #FAD2D7;
+    padding: 8px;
+    border-radius: 15px;
 }
 
-.incorrecto {
-    color: white;
-    background-color: #E76E80;
+.borde1 {
+    border: 1px #FAD2D7 solid;
+}
 
+.pintar2 {
+    background: #D5E9F6;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+.borde2 {
+    border: 1px #D5E9F6 solid;
+}
+
+.pintar3 {
+    background: #FFEDBB;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+.borde3 {
+    border: 1px #FFEDBB solid;
+}
+
+.pintar4 {
+    background: #FACBBC;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+.borde4 {
+    border: 1px #FACBBC solid;
 }
 </style>
 
@@ -75,7 +101,7 @@
     <div id="nota-informativa" class="nota-ayuda">
         <button type="button" class="close" onclick="cerrar_ayuda()" aria-label="Close"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></button>
         <!--ACA ESCRIBIR TEXTO DE LA AYUDA DE LA ACTIVIDAD-->
-        Subraya la aposición en las siguientes oraciones y escribe en los espacios en blanco si es especificativa o explicativa.
+        Escribe la respuesta en el espacio en blanco.
         <br>
         <span id="ayudas"></span>
     </div>
@@ -115,7 +141,7 @@
                     </button>
                 </li>
                 <li>
-                    <button class="btn button button_3 btnCalificar mytooltip" data-info="Calificar / Comprobar" id="bt_comprobar" onclick="Letras()">
+                    <button class="btn button button_3 btnCalificar mytooltip" data-info="Calificar / Comprobar" id="bt_comprobar" onclick="resolverN57()">
                         <span class="glyphicon glyphicon-check" aria-hidden="true"></span>
                     </button>
                 </li>
@@ -150,53 +176,66 @@
             <div class="panel-body">
                 <!--pregunats de la actividad-->
                 <div class="text-question">
-                   <b style="color:#005CA9">1.</b> <b>Subraya</b> la aposición en las siguientes oraciones y <b>señala</b> si es especificativa o explicativa.</span>
+                    <input type="text" style="text-align: center;" placeholder="0" id="nt1_1" class="nota-abierta cajas1" min="0" max="5"><span> <b style="color:#005CA9">1.</b> <b>Recuerda</b> tres kichwismos que usamos en el castellano del Ecuador.</span>
                     <br>
-                </div>
-                <br>
-                <div align="center" >
-                    <table  style="width: auto;">
-                        <tr>
-                            <td><h4><span class="enc" id="1">Eloy Alfaro</span>, <span class="enc" id="2">expresidente del Ecuador</span>, <span class="enc" id="3">concluyó el ferrocarril.</span></h4></td>
-                        </tr>
+                    <br>
+                    <table class="table">
                         <tr>
                             <td>
-                                <input type="text" id="txt1" placeholder="Escribe tu respuesta" style="border: 1px #F28E77 solid" onkeyup="this.value=this.value.toLowerCase()" class="form-control">
+                                <input class="form-control" type="text" placeholder="Escribe tu respuesta"></input>
                             </td>
-                        </tr>
-                        <tr>
-                            <td><h4><span class="enc" id="4">Antonia</span>, <span class="enc" id="5">mi mejor amiga</span>, <span class="enc" id="6">tiene</span> <span class="enc" id="7">una gran</span> <span class="enc" id="8">colección de</span> <span class="enc" id="9">minerales.</span></h4></td>
-                        </tr>
-                        <tr>
                             <td>
-                                <input type="text" id="txt2" placeholder="Escribe tu respuesta" style="border: 1px #85CEE4 solid" onkeyup="this.value=this.value.toLowerCase()" class="form-control">
+                                <input class="form-control" type="text" placeholder="Escribe tu respuesta"></input>
                             </td>
-                        </tr>
-                        <tr>
-                            <td><h4><span class="enc" id="10">El</span> <span class="enc" id="11">río</span> <span class="enc" id="12">Chota</span> <span class="enc" id="13">recorre</span> por la <span class="enc" id="14">provincia</span> de <span class="enc" id="15">Imbabura.</span></h4></td>
-                        </tr>
-                        <tr>
                             <td>
-                                <input type="text" id="txt3" placeholder="Escribe tu respuesta" style="border: 1px #F28E77 solid" onkeyup="this.value=this.value.toLowerCase()" class="form-control">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><h4><span class="enc" id="16">Jaime</span>, <span class="enc" id="17">el de los zapatos verdes</span>, <span class="enc" id="18">regresó de sus vacaciones.</span></h4></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="text" id="txt4" placeholder="Escribe tu respuesta" style="border: 1px #85CEE4 solid" onkeyup="this.value=this.value.toLowerCase()" class="form-control">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><h4><span class="enc" id="19">El</span> <span class="enc" id="20">volcán</span> <span class="enc" id="21">Tungurahua</span> está en <span class="enc" id="22">proceso</span> de <span class="enc" id="23">erupción.</span></h4></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="text" id="txt5" placeholder="Escribe tu respuesta" style="border: 1px #F28E77 solid" onkeyup="this.value=this.value.toLowerCase()" class="form-control">
+                                <input class="form-control" type="text" placeholder="Escribe tu respuesta"></input>
                             </td>
                         </tr>
                     </table>
+                </div>
+                <div class="text-question">
+                    <input type="text" style="text-align: center;" placeholder="0" id="nt1_2" class="nota-abierta cajas1" min="0" max="5"><span> <b style="color:#005CA9">2.</b> <b>Indaga</b> por qué desaparecieron el cañari, el puruhá y el caranqui, <b>escribe</b> tu respuesta.</span>
+                    <br>
+                    <br>
+                    <input class="form-control" type="text" placeholder="Escribe tu respuesta"></input>
+                    <br>
+                </div>
+                <div class="text-question">
+                    <input type="text" style="text-align: center;" placeholder="0" id="nt1_3" class="nota-abierta cajas1" min="0" max="5"><span> <b style="color:#005CA9">3.</b> <b>Explica</b> la frase “la lengua es el espejo de nuestra historia”.</span>
+                    <br>
+                    <br>
+                    <input class="form-control" type="text" placeholder="Escribe tu respuesta"></input>
+                    <br>
+                </div>
+                <div class="text-question">
+                    <input type="text" style="text-align: center;" placeholder="0" id="nt1_4" class="nota-abierta cajas1" min="0" max="5"><span style="text-align: justify;"> <b style="color:#005CA9">4.</b> <b>Combina</b> las palabras en kichwa de la primera y de la segunda columna para formar nuevas palabras. Después, <b>escribe</b> el significado de las palabras que formaste.</span>
+                    <br>
+                    <br>
+                    <div align="center">
+                        <table class="table" style="width: 80%;">
+                            <tr>
+                                <td>rumi (piedra)</td>
+                                <td>pamba (llanura)</td>
+                                <td><input class="form-control" type="text" placeholder="Escribe tu respuesta"></input></td>
+                            </tr>
+                            <tr>
+                                <td>yana (negro)</td>
+                                <td>cocha (laguna)</td>
+                                <td><input class="form-control" type="text" placeholder="Escribe tu respuesta"></input></td>
+                            </tr>
+                            <tr>
+                                <td>chiri (frío)</td>
+                                <td>urcu (cerro)</td>
+                                <td><input class="form-control" type="text" placeholder="Escribe tu respuesta"></input></td>
+                            </tr>
+                            <tr>
+                                <td>puma (felino)</td>
+                                <td>yacu (río)</td>
+                                <td><input class="form-control" type="text" placeholder="Escribe tu respuesta"></input></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br>
                 </div>
             </div>
         </div>
@@ -244,12 +283,11 @@
     <script src="js/helper.js"></script>
     <script src="js/activities.js"></script>
     <script src="js/Utilitario.js"></script>
-
-    <script src="js/actividad32.js"></script>
+    <script src="js/actividad57.js"></script>
     <script type="text/javascript">
     var titulos = "aplico";
     $("#txtNota").html("0");
-    $("#n_pagina").html("29");
+    $("#n_pagina").html("39");
     </script>
 </body>
 

@@ -55,19 +55,51 @@
 #cabecera .badge {
     background-color: #232956;
 }
-.subrayar {
-    text-decoration: underline;
-}
-.correcto {
-    color: white;
-    background-color: #8FB435;
+
+.pintar {
+    background: #D2B4D7;
+    padding: 8px ;
+    border-radius: 15px;
+    width: 400px;
+
 
 }
 
-.incorrecto {
-    color: white;
-    background-color: #E76E80;
+.borde1 {
+    border: 1px #D2B4D7 solid;
+}
 
+.pintar2 {
+    background: #FFF1CA;
+    padding: 8px;
+    border-radius: 15px;
+    width: 400px;
+}
+
+.borde2 {
+    border: 1px #FFF1CA solid;
+}
+
+.pintar3 {
+    background: #FCE0D6;
+    padding: 8px;
+    border-radius: 15px;
+    width: 400px;
+
+}
+
+.borde3 {
+    border: 1px #FCE0D6 solid;
+}
+
+.pintar4 {
+    background: #FACBBC;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+.borde4 {
+    border: 1px #FACBBC solid;
 }
 </style>
 
@@ -75,7 +107,7 @@
     <div id="nota-informativa" class="nota-ayuda">
         <button type="button" class="close" onclick="cerrar_ayuda()" aria-label="Close"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></button>
         <!--ACA ESCRIBIR TEXTO DE LA AYUDA DE LA ACTIVIDAD-->
-        Subraya la aposición en las siguientes oraciones y escribe en los espacios en blanco si es especificativa o explicativa.
+        Escribe la respuesta en el espacio en blanco.
         <br>
         <span id="ayudas"></span>
     </div>
@@ -115,7 +147,7 @@
                     </button>
                 </li>
                 <li>
-                    <button class="btn button button_3 btnCalificar mytooltip" data-info="Calificar / Comprobar" id="bt_comprobar" onclick="Letras()">
+                    <button class="btn button button_3 btnCalificar mytooltip" data-info="Calificar / Comprobar" id="bt_comprobar" onclick="calificar_abierta()">
                         <span class="glyphicon glyphicon-check" aria-hidden="true"></span>
                     </button>
                 </li>
@@ -141,62 +173,82 @@
     </nav>
     <!--FIN DE NAVBAR QUE SE AÑADE-->
     <div class="container espacio">
-        <div class="panel border-exploro" id="activity">
+        <div class="panel border-aplico" id="activity">
             <!--modificar el bg- segun la actividad-->
-            <div class="panel-heading bg-exploro">
-                <span class="titulo"><img src="img/icoE.png" alt="">Exploro para recordar</span>
+            <div class="panel-heading bg-aplico">
+                <span class="titulo"><img src="img/icoA.png" alt="">Fábrica de proyectos</span>
                 <span class="titulo_2 txtAlumno display-none" id="nombre_alumno">Alumno: </span>
             </div>
-            <div class="panel-body">
+            <div class="panel-body" style="background-color: #D5ECF6">
                 <!--pregunats de la actividad-->
                 <div class="text-question">
-                   <b style="color:#005CA9">1.</b> <b>Subraya</b> la aposición en las siguientes oraciones y <b>señala</b> si es especificativa o explicativa.</span>
+                    <img src="img/manosaobra.png" alt="" class="img-responsive">
+                    <input type="number" style="text-align: center;background-color: white;" placeholder="0" id="nt1_1" class="nota-abierta cajas1" min="0" max="10"><span> <b style="color:#005CA9">1.</b> En equipos, <b>redacten</b> los textos para las tres secciones. <b>Recuerden</b> que deben ser supercortos.</span>
                     <br>
-                </div>
-                <br>
-                <div align="center" >
-                    <table  style="width: auto;">
-                        <tr>
-                            <td><h4><span class="enc" id="1">Eloy Alfaro</span>, <span class="enc" id="2">expresidente del Ecuador</span>, <span class="enc" id="3">concluyó el ferrocarril.</span></h4></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="text" id="txt1" placeholder="Escribe tu respuesta" style="border: 1px #F28E77 solid" onkeyup="this.value=this.value.toLowerCase()" class="form-control">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><h4><span class="enc" id="4">Antonia</span>, <span class="enc" id="5">mi mejor amiga</span>, <span class="enc" id="6">tiene</span> <span class="enc" id="7">una gran</span> <span class="enc" id="8">colección de</span> <span class="enc" id="9">minerales.</span></h4></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="text" id="txt2" placeholder="Escribe tu respuesta" style="border: 1px #85CEE4 solid" onkeyup="this.value=this.value.toLowerCase()" class="form-control">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><h4><span class="enc" id="10">El</span> <span class="enc" id="11">río</span> <span class="enc" id="12">Chota</span> <span class="enc" id="13">recorre</span> por la <span class="enc" id="14">provincia</span> de <span class="enc" id="15">Imbabura.</span></h4></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="text" id="txt3" placeholder="Escribe tu respuesta" style="border: 1px #F28E77 solid" onkeyup="this.value=this.value.toLowerCase()" class="form-control">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><h4><span class="enc" id="16">Jaime</span>, <span class="enc" id="17">el de los zapatos verdes</span>, <span class="enc" id="18">regresó de sus vacaciones.</span></h4></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="text" id="txt4" placeholder="Escribe tu respuesta" style="border: 1px #85CEE4 solid" onkeyup="this.value=this.value.toLowerCase()" class="form-control">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><h4><span class="enc" id="19">El</span> <span class="enc" id="20">volcán</span> <span class="enc" id="21">Tungurahua</span> está en <span class="enc" id="22">proceso</span> de <span class="enc" id="23">erupción.</span></h4></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="text" id="txt5" placeholder="Escribe tu respuesta" style="border: 1px #F28E77 solid" onkeyup="this.value=this.value.toLowerCase()" class="form-control">
-                            </td>
-                        </tr>
-                    </table>
+                    <span style="color:#964091">Estructura de la reseña oral</span>
+                    <div align="center">
+
+                        <table class="table" style="width: 80%" >
+                            <tr>
+                                <td class="pintar"><span>Saludo</span></td>
+                                <td><textarea class="form-control borde1" style="resize: none;" cols="30" rows="2"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td class="pintar"><span>Presentación del objeto</span></td>
+                                <td><textarea class="form-control borde1" style="resize: none;" cols="30" rows="2"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td class="pintar"><span>Descripción detallada del objeto</span></td>
+                                <td><textarea class="form-control borde1" style="resize: none;" cols="30" rows="2"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td class="pintar"><span>Opinión personal</span></td>
+                                <td><textarea class="form-control borde1" style="resize: none;" cols="30" rows="2"></textarea></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <span style="color:#9B6244">Estructura de la leyenda</span>
+                    <div align="center">
+
+                        <table class="table" style="width: 80%" >
+                            <tr>
+                                <td class="pintar2"><span>Planteamiento <br> (presentación del tiempo, <br>el espacio y los personajes)</span></td>
+                                <td><textarea class="form-control borde1" style="resize: none;" cols="30" rows="2"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td class="pintar2"><span>Nudo</span></td>
+                                <td><textarea class="form-control borde1" style="resize: none;" cols="30" rows="2"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td class="pintar2"><span>Desenlace</span></td>
+                                <td><textarea class="form-control borde1" style="resize: none;" cols="30" rows="2"></textarea></td>
+                            </tr>
+
+                        </table>
+                    </div>
+                    <span style="color:#E9426D">Estructura del texto informativo</span>
+                    <div align="center">
+
+                        <table class="table" style="width: 80%" >
+                            <tr>
+                                <td class="pintar3"><span>Título</span></td>
+                                <td><textarea class="form-control borde1" style="resize: none;" cols="30" rows="2"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td class="pintar3"><span>Introducción</span></td>
+                                <td><textarea class="form-control borde1" style="resize: none;" cols="30" rows="2"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td class="pintar3"><span>Desarrollo</span></td>
+                                <td><textarea class="form-control borde1" style="resize: none;" cols="30" rows="2"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td class="pintar3"><span>Conclusión</span></td>
+                                <td><textarea class="form-control borde1" style="resize: none;" cols="30" rows="2"></textarea></td>
+                            </tr>
+
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -244,12 +296,10 @@
     <script src="js/helper.js"></script>
     <script src="js/activities.js"></script>
     <script src="js/Utilitario.js"></script>
-
-    <script src="js/actividad32.js"></script>
     <script type="text/javascript">
     var titulos = "aplico";
     $("#txtNota").html("0");
-    $("#n_pagina").html("29");
+    $("#n_pagina").html("39");
     </script>
 </body>
 
