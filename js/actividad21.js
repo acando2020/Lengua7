@@ -61,7 +61,7 @@ function calificarN30() {
             res1 = 10;
            document.getElementById("I1").style.backgroundColor = "#6DFF6F";
         } else {
-            resm1 = 10;
+            resm1 = 5;
             document.getElementById("I1").style.backgroundColor = "#F95858";
         }
     }
@@ -71,7 +71,7 @@ function calificarN30() {
             res2 = 10;
              document.getElementById("I2").style.backgroundColor = "#6DFF6F";
         } else {
-            resm2 = 10;
+            resm2 = 5;
             document.getElementById("I2").style.backgroundColor = "#F95858";
         }
     }
@@ -80,7 +80,7 @@ function calificarN30() {
             res3 = 10;
              document.getElementById("I3").style.backgroundColor = "#6DFF6F";
         } else {
-            resm3 = 10;
+            resm3 = 5;
             document.getElementById("I3").style.backgroundColor = "#F95858";
         }
     }
@@ -89,7 +89,7 @@ function calificarN30() {
             res4 = 10;
              document.getElementById("I4").style.backgroundColor = "#6DFF6F";
         } else {
-            resm4 = 10;
+            resm4 = 5;
             document.getElementById("I4").style.backgroundColor = "#F95858";
         }
     }
@@ -98,7 +98,7 @@ function calificarN30() {
             res5 = 10;
              document.getElementById("I5").style.backgroundColor = "#6DFF6F";
         } else {
-            resm5 = 10;
+            resm5 = 5;
             document.getElementById("I5").style.backgroundColor = "#F95858";
         }
     }
@@ -107,14 +107,14 @@ function calificarN30() {
             res6 = 10;
              document.getElementById("I6").style.backgroundColor = "#6DFF6F";
         } else {
-            resm6 = 10;
+            resm6 = 5;
             document.getElementById("I6").style.backgroundColor = "#F95858";
         }
     }
      var result1 = parseInt(res1) + parseInt(res2) + parseInt(res3) + parseInt(res4)+ parseInt(res5) + parseInt(res6);
      var result2 = parseInt(resm1) + parseInt(resm2) + parseInt(resm3) + parseInt(resm4)+ parseInt(resm5) + parseInt(resm6);
      totales = (result1-result2)/3;
-     
+
  $('#txtNota').html(totales.toFixed(2) + ' ');
 
         document.getElementById('R1').disabled = true;

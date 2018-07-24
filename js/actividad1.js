@@ -4,7 +4,7 @@ function resolverN1() {
     var nota2 = document.getElementById("nt1_2").value;
 
 
-  
+
     if ((nota1 == "") || (nota2 == "")) {
         alert("Debe ingresar las notas para poder evaluar");
         document.getElementById("nt1_1").focus();
@@ -19,10 +19,13 @@ function resolverN1() {
             document.getElementById('nt1_1').disabled = true;
             document.getElementById('nt1_2').disabled = true;
         } else {
-            alert('La nota no debe exceder los 5 puntos');
+            alert('La nota no debe exceder los 10 puntos');
             document.getElementById("nt1_1").style.backgroundColor = "#F95858";
             document.getElementById("nt1_2").style.backgroundColor = "#F95858";
+            document.getElementById("nt1_1").value="";
+            document.getElementById("nt1_2").value="";
             document.getElementById("nt1_1").focus();
+
         }
     }
 
